@@ -5,8 +5,8 @@ import axios from 'axios';
 import Icon from 'react-native-vector-icons/Entypo';
 import { ActivityIndicator } from 'react-native-paper';
 
-const CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/djq1vmvy4/image/upload';
-const UPLOAD_PRESET = 'rfahuwwl'; 
+const CLOUDINARY_URL = 'your_cloudinary_url';
+const UPLOAD_PRESET = 'your_upload_preset'; 
 
 const ImageUpload = ({onChnage,imgurl}:{onChnage:(url:string)=>void,imgurl:string}) => {
 
