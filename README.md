@@ -1,3 +1,5 @@
+#Link to download apk => https://www.upload-apk.com/NRLoPpR3gsJYGA4
+
 # Running the App Locally
 
 To run the app locally, follow these steps:
