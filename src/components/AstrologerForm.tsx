@@ -14,7 +14,7 @@ import { expertiseAreas, indianLanguages } from '../constants/indext';
 const AstrologerSchema = yup.object().shape({
     name: yup.string().required('Name is required'),
     experience: yup.number().required('Experience is required').min(0,'Experience can not be negative'),
-    languages: yup.array().of(yup.string()).required().min(1,'Atleast one language required'),
+    languages: yup.array().of(yup.string()).required().min(1,'Atleast 1 language required'),
     experties: yup.array().of(yup.string()).required().min(1,'Atleast 1 experty is required'),
     price: yup.number().required('Price is required').min(0,'Price can not be negative'),
     imageUrl: yup.string().required('Image is required'),
@@ -109,7 +109,7 @@ const AstrologerForm = ({isCreate,astrologer,goToHomePage}:{isCreate:boolean,ast
                     setFieldValue('experties',values.experties);
                 }}/>
                 {
-                    errors.languages && touched.languages && <Text style = {styles.errorText}>{errors.languages}</Text>
+                    errors.experties && touched.experties && <Text style = {styles.errorText}>{errors.experties}</Text>
                 }
                 </View>
                 <View style={styles.container}>

@@ -27,7 +27,10 @@ const Home = ({navigation}:HomeProps) => {
   const getAstrologers = async (addmore:boolean) => {
     try {
       setLoading(true);
-      const responce = await fetchAstrologers(page,5,filters);
+      if(!addmore && page!=1){
+        setPage(1);
+      }
+      const responce = await fetchAstrologers(addmore?page:1,5,filters);
       addmore?setAstrologers([...astrologers,...responce.astrologers]):setAstrologers(responce.astrologers);
       setHasMore(responce.hasMore)
     } catch (error) {
